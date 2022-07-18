@@ -8,9 +8,11 @@ import android.graphics.Typeface;
 import android.text.TextUtils;
 import android.view.View;
 
+import androidx.annotation.ColorInt;
 import androidx.annotation.Nullable;
 
 import com.xuexiang.xui.logs.UILog;
+import com.xuexiang.xui.utils.ThemeUtils;
 import com.xuexiang.xui.utils.ViewUtils;
 
 import io.github.inflationx.calligraphy3.CalligraphyConfig;
@@ -39,7 +41,7 @@ public class XUI {
     /**
      * 初始化
      *
-     * @param context
+     * @param context 上下文
      */
     public static void init(Application context) {
         sContext = context;
@@ -197,6 +199,17 @@ public class XUI {
         } else {
             activity.setTheme(R.style.XUITheme_Tablet_Big);
         }
+    }
+
+    /**
+     * 获取主题色
+     *
+     * @param context 上下文
+     * @return 主题色
+     */
+    @ColorInt
+    public static int getMainThemeColor(Context context) {
+        return ThemeUtils.getMainThemeColor(context);
     }
 
 }

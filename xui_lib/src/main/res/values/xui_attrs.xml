@@ -1066,6 +1066,8 @@
         <attr name="vcet_number" format="integer" />
         <!--每一个输入框的宽度，默认21dp-->
         <attr name="vcet_width" format="dimension|reference" />
+        <!--平分每个输入框的宽度，默认是false，如果为true，vcet_width值将失效-->
+        <attr name="vcet_is_divide_equally" format="boolean" />
         <!--输入框之间的分割线-->
         <attr name="vcet_divider" format="reference" />
         <!--输入框文字颜色，默认黑色-->
@@ -1241,6 +1243,18 @@
         <attr name="photo_src" format="integer" />
     </declare-styleable>
 
+    <!-- signatureView -->
+    <declare-styleable name="SignatureView">
+        <!--画笔的粗细，默认10px-->
+        <attr name="stv_penSize" format="dimension" />
+        <!--画笔的颜色， 默认黑色-->
+        <attr name="stv_penColor" format="color" />
+        <!--签名板背景颜色， 默认透明-->
+        <attr name="stv_backColor" format="color" />
+        <!--是否拥有边框, 边框的宽度为1dp, 默认false-->
+        <attr name="stv_hasBorder" format="boolean" />
+    </declare-styleable>
+
     <!--=============================Bar========================================-->
 
     <declare-styleable name="CookieBar">
@@ -1272,6 +1286,8 @@
         <attr name="indicator_width" format="dimension" />
         <!--指示器的高度，默认45dp-->
         <attr name="indicator_height" format="dimension" />
+        <!--指示器(整个Tab）的背景资源-->
+        <attr name="indicator_background" format="reference" />
 
         <!--指示器文字的大小，默认14sp-->
         <attr name="indicator_textSize" format="dimension" />
@@ -1286,8 +1302,12 @@
         <attr name="indicator_line_show" format="boolean" />
         <!--指示器底部的高度，默认3-->
         <attr name="indicator_line_height" format="dimension" />
+        <!--指示器底部的宽度，默认-1(MATCH_PARENT)为填充满-->
+        <attr name="indicator_line_width" format="dimension" />
         <!--指示器指示线的颜色，默认R.attr.colorAccent-->
         <attr name="indicator_line_color" format="color" />
+        <!--指示器指示线的资源，设置了这个indicator_line_height和indicator_line_color将不生效-->
+        <attr name="indicator_line_res" format="reference" />
 
         <!--指示器底部指示线的颜色，默认R.attr.xui_config_color_separator_dark-->
         <attr name="indicator_bottom_line_color" format="color" />
@@ -1704,5 +1724,6 @@
     <attr name="XUIGroupListSectionViewStyle" format="reference" />
     <attr name="XUITipPointStyle" format="reference" />
     <attr name="XUITipNewStyle" format="reference" />
+    <attr name="LoggerTextViewStyle" format="reference" />
 
 </resources>

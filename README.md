@@ -1,55 +1,70 @@
 <p align="center">
-  <img src="./art/app_logo_xui.png" width="388" height="321" alt="Banner" />
+  <img src="https://ss.im5i.com/2021/06/14/65G07.png" width="388" height="321" alt="Banner" />
 </p>
 
 # XUI
+
 [![](https://jitpack.io/v/xuexiangjys/XUI.svg)](https://jitpack.io/#xuexiangjys/XUI)
 [![api](https://img.shields.io/badge/API-17+-brightgreen.svg)](https://android-arsenal.com/api?level=17)
 [![Issue](https://img.shields.io/github/issues/xuexiangjys/XUI.svg)](https://github.com/xuexiangjys/XUI/issues)
 [![Star](https://img.shields.io/github/stars/xuexiangjys/XUI.svg)](https://github.com/xuexiangjys/XUI)
 
-一个简洁而又优雅的Android原生UI框架，解放你的双手！还不赶紧点击[使用说明文档](https://github.com/xuexiangjys/XUI/wiki)，体验一下吧！
+## [English](./README.md) | [Chinese](./README_ZH.md)
 
-> 涵盖绝大部分的UI组件：TextView、Button、EditText、ImageView、Spinner、Picker、Dialog、PopupWindow、ProgressBar、LoadingView、StateLayout、FlowLayout、Switch、Actionbar、TabBar、Banner、GuideView、BadgeView、MarqueeView、WebView、SearchView等一系列的组件和丰富多彩的样式主题。
+A simple and elegant Android native UI framework, free your hands! Click on the [instruction document](https://github.com/xuexiangjys/XUI/wiki) and experience it!
 
-在提issue前，请先阅读[【提问的智慧】](https://xuexiangjys.blog.csdn.net/article/details/83344235)，并严格按照[issue模板](https://github.com/xuexiangjys/XUI/issues/new/choose)进行填写，节约大家的时间。
+> Covers most of the UI components：TextView、Button、EditText、ImageView、Spinner、Picker、Dialog、PopupWindow、ProgressBar、LoadingView、StateLayout、FlowLayout、Switch、Actionbar、TabBar、Banner、GuideView、BadgeView、MarqueeView、WebView、SearchView...etc. A series of components and colorful style themes。
 
-在使用前，请一定要仔细阅读[使用说明文档](https://github.com/xuexiangjys/XUI/wiki),重要的事情说三遍！！！
+Please read [【wisdom of asking questions】](https://xuexiangjys.blog.csdn.net/article/details/83344235) before raising the issue and strictly follow the [issue template](https://github.com/xuexiangjys/XUI/issues/new/choose) fill in and save everyone's time.
 
-在使用前，请一定要仔细阅读[使用说明文档](https://github.com/xuexiangjys/XUI/wiki),重要的事情说三遍！！！
+Please read the [instruction document](https://github.com/xuexiangjys/XUI/wiki) carefully before use, important things are to be repeated for three time!!！
 
-在使用前，请一定要仔细阅读[使用说明文档](https://github.com/xuexiangjys/XUI/wiki),重要的事情说三遍！！！
+please read the [instruction document](https://github.com/xuexiangjys/XUI/wiki) carefully before use, important things are to be repeated for three time!!！
 
-## 关于我
+Please read the [instruction document](https://github.com/xuexiangjys/XUI/wiki) carefully before use, important things are to be repeated for three time!!！
 
-[![github](https://img.shields.io/badge/GitHub-xuexiangjys-blue.svg)](https://github.com/xuexiangjys)   [![csdn](https://img.shields.io/badge/CSDN-xuexiangjys-green.svg)](http://blog.csdn.net/xuexiangjys)   [![简书](https://img.shields.io/badge/简书-xuexiangjys-red.svg)](https://www.jianshu.com/u/6bf605575337)   [![掘金](https://img.shields.io/badge/掘金-xuexiangjys-brightgreen.svg)](https://juejin.im/user/598feef55188257d592e56ed)   [![知乎](https://img.shields.io/badge/知乎-xuexiangjys-violet.svg)](https://www.zhihu.com/people/xuexiangjys) 
+## About me
 
-## X系列库快速集成
+| WeChat public number   | juejin     |  zhihu    |  CSDN   |   jianshu   |   segmentfault  |   bilibili  |   toutiao
+|---------|---------|--------- |---------|---------|---------|---------|---------|
+| [我的Android开源之旅](https://ss.im5i.com/2021/06/14/6tqAU.png)  |  [Click me](https://juejin.im/user/598feef55188257d592e56ed/posts)    |   [Click me](https://www.zhihu.com/people/xuexiangjys/posts)       |   [Click me](https://xuexiangjys.blog.csdn.net/)  |   [Click me](https://www.jianshu.com/u/6bf605575337)  |   [Click me](https://segmentfault.com/u/xuexiangjys)  |   [Click me](https://space.bilibili.com/483850585)  |   [Click me](https://img.rruu.net/image/5ff34ff7b02dd)
 
-为了方便大家快速集成X系列框架库，我提供了一个空壳模版供大家参考使用: [https://github.com/xuexiangjys/TemplateAppProject](https://github.com/xuexiangjys/TemplateAppProject)
+## Rapid integration of X-Library
 
-除此之外，我还特别制作了几期[视频教程](https://space.bilibili.com/483850585/channel/detail?cid=104998)供大家学习参考.
+In order to facilitate the rapid integration of X-Library, I provide a template project for your reference: [https://github.com/xuexiangjys/TemplateAppProject](https://github.com/xuexiangjys/TemplateAppProject)
 
-----
-
-## 特征
-
-* 简洁优雅，尽可能少得引用资源文件的数量，项目库整体大小不足1M(打包后大约644k）
-* 组件丰富，提供了绝大多数我们在开发者常用的功能组件。
-* 使用简单，为方便快速开发，提高开发效率，对api进行了优化，提供一键式接入。
-* 样式统一，框架提供了一系列统一的样式，使UI整体看上去美观和谐。
-* 兼容性高，框架还提供了3种不同尺寸设备的样式（4.5英寸、7英寸和10英寸），并且最低兼容到Android 17, 让UI兼容性更强。
-* 扩展性强，各组件提供了丰富的属性和样式API，可以通过设置不同的样式属性，构建不同风格的UI。
+In addition, I have also produced several [video tutorials](https://space.bilibili.com/483850585/channel/detail?cid=104998) for your reference.
 
 ----
 
-## 如何使用
+## Features
 
-> 在决定使用XUI前，你必须明确的一点是，此框架给出的是一整套UI的整体解决方案，如果你只是想使用其中的几个控件，那大可不必引入如此庞大的一个UI库，Github上会有更好的组件库。如果你是想拥有一套可以定制的、统一的UI整体解决方案的话，那么你就继续往下看吧！
+* Simple and elegant，the total size of the project library is less than 1M (about 644k after packaging).
 
-### 添加Gradle依赖
+* Rich components，provides the vast majority of our developers in common functional components.
 
-1.先在项目根目录的 build.gradle 的 repositories 添加:
+* Easy to use，in order to facilitate rapid development and improve development efficiency, the API is optimized to provide one click access.
+
+* Uniform style，the framework provides a series of unified styles to make the UI look beautiful and harmonious.
+
+* High compatibility，the framework also provides three different sizes of device styles (4.5 inch, 7 inch and 10 inch) and is compatible with Android 17 at least, which makes UI compatibility stronger.
+
+* Strong expansibility，each component provides rich properties and style APIs, and different styles of UI can be built by setting different style properties.
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/xuexiangjys/XUI.svg)](https://starchart.cc/xuexiangjys/XUI)
+
+----
+
+## Usage
+
+> Before you consider using XUI, you must be clear that this framework provides a whole set of UI solutions. If you just want to use a few of them, you don't need to introduce such a huge UI library. You can find better component libraries on GitHub. If you want to have a customized, unified UI overall solution, then you can continue to look!
+
+### Add gradle dependency
+
+1.In the project root directory `build.gradle`:
+
 ```
 allprojects {
      repositories {
@@ -59,27 +74,27 @@ allprojects {
 }
 ```
 
-2.然后在dependencies添加:
+2.Then add in the dependencies of `build.gradle` of the application project (usually app):
 
 ```
 dependencies {
   ...
-  //androidx项目
-  implementation 'com.github.xuexiangjys:XUI:1.1.5'
+  //androidx project
+  implementation 'com.github.xuexiangjys:XUI:1.1.9'
 
-  implementation 'androidx.appcompat:appcompat:1.1.0'
-  implementation 'androidx.recyclerview:recyclerview:1.1.0'
-  implementation 'com.google.android.material:material:1.1.0'
-  implementation 'com.github.bumptech.glide:glide:4.11.0'
+  implementation 'androidx.appcompat:appcompat:1.3.1'
+  implementation 'androidx.recyclerview:recyclerview:1.2.1'
+  implementation 'com.google.android.material:material:1.4.0'
+  implementation 'com.github.bumptech.glide:glide:4.12.0'
 }
 ```
 
-【注意】如果你的项目目前还未使用androidx，请使用如下配置：
+【Note】 If your project does not currently use `androidx`, please use the following configuration:
 
 ```
 dependencies {
   ...
-  //support项目
+  //support project
   implementation 'com.github.xuexiangjys:XUI:1.0.9-support'
 
   implementation 'com.android.support:appcompat-v7:28.0.0'
@@ -89,38 +104,31 @@ dependencies {
 }
 ```
 
-### 初始化XUI设置
+### Initialization
 
-1.在Application最顶部初始化设置（必须）
+1.Modify the basic theme of the application (required)
 
-```
-XUI.init(this); //初始化UI框架
-XUI.debug(true);  //开启UI框架调试日志
+> The basic theme of the application must be set, otherwise the component will not work normally! It is very important to ensure that the theme of all windows using XUI components is a subclass of `XUITheme`!!!
 
-```
+Basic topic type：
 
-2.调整应用的基础主题（必须）
+* Large flat plate(10 inches, 240dpi, 1920*1200）：XUITheme.Tablet.Big
 
-> 必须设置应用的基础主题，否则组件将无法正常使用！必须保证所有用到XUI组件的窗口的主题都为XUITheme的子类，这非常重要！！！
+* Small plate(7 inches, 320dpi, 1920*1200）：XUITheme.Tablet.Small
 
-基础主题类型：
-
-* 大平板(10英寸, 240dpi, 1920*1200）：XUITheme.Tablet.Big
-
-* 小平板(7英寸, 320dpi, 1920*1200）：XUITheme.Tablet.Small
-
-* 手机（4.5英寸, 320dpi, 720*1280）：XUITheme.Phone
+* Mobile phone（4.5 inches, 320dpi, 720*1280）：XUITheme.Phone
 
 ```
 <style name="AppTheme" parent="XUITheme.Phone">
-     <!-- 自定义自己的主题样式 --> 
+     <!-- Customize your own theme style --> 
     <item name="colorPrimary">@color/colorPrimary</item>
     <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
     <item name="colorAccent">@color/colorAccent</item>
  </style>
 
 ```
-当然也可以在Activity刚开始时调用如下代码动态设置主题
+
+Of course, you can also call the following code at the beginning of the `Activity` to set the theme dynamically.
 
 ```
 @Override
@@ -131,76 +139,90 @@ protected void onCreate(Bundle savedInstanceState) {
 }
 ```
 
-3.调整字体库（对字体无要求的可省略）
+2.Adjust font library (omit if there is no requirement for font)
 
-（1）设置你需要修改的字体库路径（assets下）
+（1）Set the font library path you need to modify (under assets)
+
 ```
-//设置默认字体为华文行楷，这里写你的字体库
+// Set the default font to Chinese line Kai, write your font library here
 XUI.getInstance().initFontStyle("fonts/hwxk.ttf");
 ```
 
-（2）在项目的基础Activity中加入如下代码注入字体.
+（2）Add the following code to the basic activity of the project to inject fonts
 
-注意：1.1.4版本之后使用如下设置注入
+Note: after version 1.1.4, use the following settings for injection
+
 ```
 @Override
 protected void attachBaseContext(Context newBase) {
-    //注入字体
+    // Injection font
     super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
 }
 ```
 
-注意：1.1.3版本及之前的版本使用如下设置注入
+Note: versions 1.1.3 and earlier use the following settings for injection
+
 ```
 @Override
 protected void attachBaseContext(Context newBase) {
-    //注入字体
+    // Injection font
     super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
 }
 ```
 
-## 混淆配置
-
-```
--keep class com.xuexiang.xui.widget.edittext.materialedittext.** { *; }
-
-```
-
 ----
 
-## 演示（请star支持）
+## Demonstration
 
-### 演示程序截图
+### Screenshot
 
-![](./art/1_splash.png) &emsp; ![](./art/2_main.png) &emsp; ![](./art/3_about.png) &emsp; ![](./art/4_menu.png)
+![1_splash.png](https://ss.im5i.com/2021/06/14/6uDhR.png) &emsp; ![2_main.png](https://ss.im5i.com/2021/06/14/6uzmO.png) &emsp; ![3_about.png](https://ss.im5i.com/2021/06/14/6uaJd.png) &emsp;
 
-![](./art/5_dialog.png) &emsp; ![](./art/6_bottom_dialog.png) &emsp; ![](./art/7_picker.png) &emsp; ![](./art/8_webview.png)
+![4_menu.png](https://ss.im5i.com/2021/06/14/6u4n4.png) &emsp; ![5_dialog.png](https://ss.im5i.com/2021/06/14/6upMW.png) &emsp; ![6_bottom_dialog.png](https://ss.im5i.com/2021/06/14/6uMdG.png) &emsp;
 
-![](./art/9_flowlayout.png) &emsp; ![](./art/10_ninegrid.png) &emsp; ![](./art/11_radius_imageview.png) &emsp; ![](./art/12_badge_view.png)
+![7_picker.png](https://ss.im5i.com/2021/06/14/6uOWz.png) &emsp; ![8_webview.png](https://ss.im5i.com/2021/06/14/6uk05.png) &emsp;![9_flowlayout.png](https://ss.im5i.com/2021/06/14/65FS6.png) &emsp;
 
-![](./art/13_tabview.png) &emsp; ![](./art/14_citypicker.png) &emsp; ![](./art/15_refresh_layout.png) &emsp; ![](./art/16_spinner.png) &emsp;
+![10_ninegrid.png](https://ss.im5i.com/2021/06/14/65Qt8.png) &emsp; ![11_radius_imageview.png](https://ss.im5i.com/2021/06/14/65hxU.png) &emsp; ![12_badge_view.png](https://ss.im5i.com/2021/06/14/65Cww.png) &emsp;
 
-### Demo下载
+![13_tabview.png](https://ss.im5i.com/2021/06/14/65qJZ.png) &emsp; ![14_citypicker.png](https://ss.im5i.com/2021/06/14/65voJ.png) &emsp; ![15_refresh_layout.png](https://ss.im5i.com/2021/06/14/656O1.png) &emsp;
 
-> 演示程序大概18M（主要是demo中集成了一个小视频拍摄的库比较大，大约13M左右，而XUI库目前只有644k大小），项目比较大，推荐使用蒲公英下载。
+![16_spinner.png](https://ss.im5i.com/2021/06/14/65Sdn.png) &emsp;
 
-![](./art/xui_size.png)
+### Demo download
 
-#### 蒲公英下载
+> The demo program is about 18M (mainly because the demo integrates a small video shooting library, which is about 13M, while XUI library is only 644k in size). The project is relatively large, and dandelion is recommended to download.
 
-> 蒲公英下载的密码: xuexiangjys
+![xui_size.png](https://ss.im5i.com/2021/06/14/65rcS.png)
 
-[![蒲公英](https://img.shields.io/badge/downloads-蒲公英-blue.svg)](https://www.pgyer.com/XUIDemo)
+#### Pgyer Download
 
-![](./art/download_pugongying.png)
+> Pgyer Download password: xuexiangjys
 
-#### Github下载
+[![Pgyer](https://img.shields.io/badge/downloads-pgyer-blue.svg)](https://www.pgyer.com/XUIDemo)
+
+[![download_pugongying.png](https://ss.im5i.com/2021/06/14/65VuP.png)](https://www.pgyer.com/XUIDemo)
+
+#### Github Download
 
 [![Github](https://img.shields.io/badge/downloads-Github-blue.svg)](https://github.com/xuexiangjys/XUI/blob/master/apk/xuidemo.apk?raw=true)
 
-![](./art/download_github.png)
+[![download_github.png](https://ss.im5i.com/2021/06/14/65PS2.png)](https://github.com/xuexiangjys/XUI/blob/master/apk/xuidemo.apk?raw=true)
 
-## 特别感谢
+## Contribution
+
+> Due to my limited energy, you are welcome to actively contribute your idea. You will have the opportunity to participate in the maintenance of star over 1000 projects on GitHub and enhance your industry influence!
+
+Code contribution requirements：
+
+* Please keep the existing code style, not according to your habits. Please comply with Alibaba java coding specification.
+
+* Just modify the code you are sure need to be optimized, not all the different code from your ideas.
+
+* Before launching a pull request, you should test your commit code adequately.
+
+* Please commit new code to the dev branch instead of the master branch.
+
+## Thanks
 
 * [QMUI_Android](https://github.com/Tencent/QMUI_Android)
 * [AgentWeb](https://github.com/Justson/AgentWeb)
@@ -220,49 +242,100 @@ protected void attachBaseContext(Context newBase) {
 * [SwipeRecyclerView](https://github.com/yanzhenjie/SwipeRecyclerView)
 
 
-## 如果觉得项目还不错，可以考虑打赏一波
+## Sponsor
 
-> 你的打赏是我维护的动力，我将会列出所有打赏人员的清单在下方作为凭证，打赏前请留下打赏项目的备注！
+> Your support is the driving force of my maintenance. I will list the list of all the reward personnel at the bottom as the voucher. Please leave the notes of the support items before rewarding!
 
-![](./art/alipay.jpeg) &emsp; ![](./art/weixinpay.jpeg)
+![pay.png](https://ss.im5i.com/2021/06/14/6twG6.png)
 
-感谢下面小伙伴的打赏：
+Thank you for your sponsorship：
 
-姓名 | 金额 | 方式
+Name | Money | Platform
 :-|:-|:-
-C*y | 1￥ | 微信
-*流 | 1￥ | 微信
-*声 | 50￥ | 微信
-*宇涛 | 5￥ | 支付宝
-*事 | 10￥ | 微信
-优*1 | 168￥ | 微信
-*、 | 20￥ | 微信
-*钰晗 | 6￥ | 支付宝
-*娜 | 3￥ | 微信
-*米 | 20￥ | 微信
-*忘 | 10￥ | 微信
-*清红 | 1￥ | 支付宝
-*口 | 5￥ | 微信
-\* | 10.24￥ | 微信
-*俊耀 | 100￥ | 支付宝
-*俊杰 | 1￥ | 支付宝
-*鸥 | 10.24￥ | 微信
-*云 | 20.21￥ | 支付宝
-*钰晗 | 66￥ | 支付宝
-*杰柱 | 10￥ | 支付宝
-*毛 | 6.66￥ | 微信
-*凯 | 10￥ | 微信
-r*o | 8.88￥ | 微信
-T*8 | 7.77￥ | 微信
-v*d | 20￥ | 微信
-B*G | 1￥ | 微信
-*舞 | 10￥ | 微信
-*肉 | 2￥ | 微信
-*拖 | 12.12￥ | 微信
+C*y | 1￥ | WeChat
+*流 | 1￥ | WeChat
+*声 | 50￥ | WeChat
+*宇涛 | 5￥ | Alipay
+*事 | 10￥ | WeChat
+优*1 | 168￥ | WeChat
+*、 | 20￥ | WeChat
+*钰晗 | 6￥ | Alipay
+*娜 | 3￥ | WeChat
+*米 | 20￥ | WeChat
+*忘 | 10￥ | WeChat
+*清红 | 1￥ | Alipay
+*口 | 5￥ | WeChat
+\* | 10.24￥ | WeChat
+*俊耀 | 100￥ | Alipay
+*俊杰 | 1￥ | Alipay
+*鸥 | 10.24￥ | WeChat
+*云 | 20.21￥ | Alipay
+*钰晗 | 66￥ | Alipay
+*杰柱 | 10￥ | Alipay
+*毛 | 6.66￥ | WeChat
+*凯 | 10￥ | WeChat
+r*o | 8.88￥ | WeChat
+T*8 | 7.77￥ | WeChat
+v*d | 20￥ | WeChat
+B*G | 1￥ | WeChat
+*舞 | 10￥ | WeChat
+*肉 | 2￥ | WeChat
+*拖 | 12.12￥ | WeChat
+*鱼 | 20￥ | WeChat
+*明 | 20￥ | WeChat
+*化 | 8￥ | WeChat
+*攀 | 16.80￥ | Alipay
+**航 | 10￥ | Alipay
+**飞 | 10.24￥ | Alipay
+*瑟 | 1￥ | WeChat
+*原 | 10.24￥ | Alipay
+*越 | 10.24￥ | WeChat
+**俊 | 80￥ | Alipay
+*尋 | 10.24￥ | WeChat
+爱生活 | 100￥ | QQ
+*茶 | 100￥ | WeChat
+*头 | 2￥ | WeChat
+*噜 | 10.99￥ | WeChat
+*W*m | 10￥ | WeChat
+*谷 | 10￥ | WeChat
+*望 | 5￥ | WeChat
+J*o | 10.24￥ | WeChat
+*休 | 10.24￥ | WeChat
+**俊 | 80￥ | Alipay
+**伟 | 1.1￥ | Alipay
+**云 | 5￥ | Alipay
+*航 | 3￥ | Alipay
+*维 | 5￥ | WeChat
+*鑫 | 188.88￥ | Alipay
+*玉 | 10￥ | Alipay
+**贺 | 100￥ | Alipay
+**伟 | 65￥ | Alipay
+*G | 1￥ | WeChat
+M*u | 10.24￥ | WeChat
+S*m | 10.24￥ | WeChat
+T*g | 15￥ | WeChat
+*边 | 10.24￥ | WeChat
+*寻 | 20.48￥ | WeChat
+*凉 | 10.24￥ | WeChat
+S*y | 10.24￥ | WeChat
+M*n | 1￥ | WeChat
+J*e | 10.24￥ | WeChat
+*、 | 10.24￥ | WeChat
+禹*） | 1￥ | WeChat
+X*？ | 18.88￥ | WeChat
+*事 | 5￥ | WeChat
+*之 | 10￥ | WeChat
+*安 | 18.88￥ | WeChat
+*🎵 | 10.24￥ | WeChat
+*👔 | 10￥ | WeChat
+*洲 | 10￥ | WeChat
 
-## 联系方式
+## Contact
 
-[![](https://img.shields.io/badge/XUI开源交流群-695048677-blue.svg)](http://shang.qq.com/wpa/qunwpa?idkey=a2ab505862c81f1528416b585832022e835ce0abe28eefa4b0d53f8094a5691d)
-[![](https://img.shields.io/badge/XUI开源交流2群-700246750-blue.svg)](http://shang.qq.com/wpa/qunwpa?idkey=39497f13d5e456d219be785361a282d2d9c8cd9ba7745f6170def9d90643e164)
+[![](https://img.shields.io/badge/XUIGroup1-695048677-blue.svg)](http://shang.qq.com/wpa/qunwpa?idkey=a2ab505862c81f1528416b585832022e835ce0abe28eefa4b0d53f8094a5691d)
 
-![](./art/xui_qq.jpg)
+[![](https://img.shields.io/badge/XUIGroup2-700246750-blue.svg)](http://shang.qq.com/wpa/qunwpa?idkey=39497f13d5e456d219be785361a282d2d9c8cd9ba7745f6170def9d90643e164)
+
+[![](https://img.shields.io/badge/XUIGroup3-1090612354-blue.svg)](https://qm.qq.com/cgi-bin/qm/qr?k=nOY3GGJY-jiwzhQpR8E06G-yrOUsxCP1)
+
+![](https://ss.im5i.com/2021/06/14/65yoL.jpg)

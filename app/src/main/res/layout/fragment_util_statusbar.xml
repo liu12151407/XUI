@@ -4,10 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="?attr/xui_config_content_spacing_vertical">
+    <androidx.core.widget.NestedScrollView style="@style/ScrollViewStyle">
 
         <com.xuexiang.xui.widget.grouplist.XUIGroupListView
             android:id="@+id/groupListView"

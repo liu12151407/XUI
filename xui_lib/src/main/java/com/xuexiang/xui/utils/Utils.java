@@ -17,6 +17,8 @@
 
 package com.xuexiang.xui.utils;
 
+import android.annotation.SuppressLint;
+import android.app.Application;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
@@ -48,6 +50,7 @@ import androidx.annotation.Nullable;
 import java.io.Closeable;
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 
 /**
  * 工具类（不建议外部调用)
@@ -78,9 +81,23 @@ public final class Utils {
     private static final String STATUS_BAR_HEIGHT_RES_NAME = "status_bar_height";
 
     /**
-     * 计算状态栏高度高度 getStatusBarHeight
+     * 计算状态栏高度 getStatusBarHeight
      *
-     * @return
+     * @param context 上下文
+     * @return 状态栏高度
+     */
+    public static int getStatusBarHeight(Context context) {
+        if (context == null) {
+            return getStatusBarHeight();
+        }
+        return getInternalDimensionSize(context.getResources(),
+                STATUS_BAR_HEIGHT_RES_NAME);
+    }
+
+    /**
+     * 计算状态栏高度 getStatusBarHeight
+     *
+     * @return 状态栏高度
      */
     public static int getStatusBarHeight() {
         return getInternalDimensionSize(Resources.getSystem(),
@@ -142,26 +159,28 @@ public final class Utils {
     /**
      * View设备背景
      *
-     * @param context
-     * @param v
-     * @param res
+     * @param context 上下文
+     * @param view    控件
+     * @param resId   资源id
      */
-    @SuppressWarnings("deprecation")
-    public static void setBackground(Context context, View v, int res) {
-        Bitmap bm = BitmapFactory.decodeResource(context.getResources(), res);
+    public static void setBackground(Context context, View view, int resId) {
+        if (view == null) {
+            return;
+        }
+        Bitmap bm = BitmapFactory.decodeResource(context.getResources(), resId);
         BitmapDrawable bd = new BitmapDrawable(context.getResources(), bm);
-        v.setBackgroundDrawable(bd);
+        view.setBackground(bd);
     }
 
     /**
      * 释放图片资源
      *
-     * @param v
+     * @param view 控件
      */
-    public static void recycleBackground(View v) {
-        Drawable d = v.getBackground();
+    public static void recycleBackground(View view) {
+        Drawable d = view.getBackground();
         //别忘了把背景设为null，避免onDraw刷新背景时候出现used a recycled bitmap错误
-        v.setBackgroundResource(0);
+        view.setBackgroundResource(0);
         if (d != null && d instanceof BitmapDrawable) {
             Bitmap bmp = ((BitmapDrawable) d).getBitmap();
             if (bmp != null && !bmp.isRecycled()) {
@@ -372,7 +391,7 @@ public final class Utils {
     /**
      * 支持?attrs属性  http://stackoverflow.com/questions/27986204  ：As mentioned here on API < 21 you can't use attrs to color in xml drawable.
      *
-     * @return
+     * @return 支持?attrs属性
      */
     public static boolean isSupportColorAttrs() {
         return Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP;
@@ -412,6 +431,40 @@ public final class Utils {
             drawable.setColorFilter(colorFilter);
         }
         return colorFilter;
+    }
+
+    public static Application getApplicationByReflect() {
+        try {
+            @SuppressLint("PrivateApi")
+            Class<?> activityThread = Class.forName("android.app.ActivityThread");
+            Object thread = activityThread.getMethod("currentActivityThread").invoke(null);
+            Object app = activityThread.getMethod("getApplication").invoke(thread);
+            if (app == null) {
+                throw new NullPointerException("you should init first");
+            }
+            return (Application) app;
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        throw new NullPointerException("you should init first");
+    }
+
+    /**
+     * 类型强转
+     *
+     * @param object 需要强转的对象
+     * @param clazz  需要强转的类型
+     * @param <T>
+     * @return 类型强转结果
+     */
+    public static <T> T cast(final Object object, Class<T> clazz) {
+        return clazz != null && clazz.isInstance(object) ? (T) object : null;
     }
 
 }

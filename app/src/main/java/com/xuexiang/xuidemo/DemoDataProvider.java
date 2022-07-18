@@ -208,18 +208,18 @@ public class DemoDataProvider {
 
     private static List<String> getUrls() {
         List<String> urls = new ArrayList<>();
-        urls.add("http://img4.duitang.com/uploads/item/201307/02/20130702113059_UEGL2.jpeg");
-        urls.add("http://img0.imgtn.bdimg.com/it/u=985035006,79865976&fm=21&gp=0.jpg");
-        urls.add("http://img5.imgtn.bdimg.com/it/u=1774291582,2563335167&fm=21&gp=0.jpg");
-        urls.add("http://img5.imgtn.bdimg.com/it/u=1511364704,3337189105&fm=21&gp=0.jpg");
-        urls.add("http://pic.qiantucdn.com/58pic/11/90/83/96a58PICrRx.jpg");
-        urls.add("http://pic.qiantucdn.com/58pic/13/09/97/26W58PICKNk_1024.jpg");
-        urls.add("http://img1.imgtn.bdimg.com/it/u=3272030875,860665188&fm=21&gp=0.jpg");
-        urls.add("http://img1.imgtn.bdimg.com/it/u=2237658959,3726297486&fm=21&gp=0.jpg");
-        urls.add("http://img1.imgtn.bdimg.com/it/u=3016675040,1510439865&fm=21&gp=0.jpg");
-        urls.add("http://photocdn.sohu.com/20160307/mp62252655_1457334772519_2.png");
+        urls.add("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605454727961&di=523c0cbc27edf8c9c4dfc705c395f910&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn%2Fw640h360%2F20180204%2Fe374-fyrhcqy4449849.jpg");
+        urls.add("https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=141294069,864810829&fm=26&gp=0.jpg");
+        urls.add("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605454727960&di=cf69e23566394467534c9606e1f65555&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201707%2F03%2F20170703232714_njuTy.jpeg");
+        urls.add("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605454727923&di=6b54cc07f6e1aea9ffbdc85348454d8c&imgtype=0&src=http%3A%2F%2Fcdn.duitang.com%2Fuploads%2Fitem%2F201203%2F23%2F20120323140617_ZcAw3.jpeg");
+        urls.add("https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1107220453,145887914&fm=26&gp=0.jpg");
+        urls.add("https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2860640912,1833965317&fm=26&gp=0.jpg");
+        urls.add("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605454900301&di=1168cceb30a3e19b6260a2d7f3ab68f4&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201609%2F24%2F20160924221133_w5Ysc.thumb.700_0.jpeg");
+        urls.add("https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3933345026,3409802114&fm=26&gp=0.jpg");
+        urls.add("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605454900300&di=47cb3c09f5f02b89942bfda02b4c6c5a&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201611%2F18%2F20161118171843_JGHBz.thumb.700_0.jpeg");
+        urls.add("https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2065870676,3251648368&fm=26&gp=0.jpg");
 
-        urls.add("http://img0.imgtn.bdimg.com/it/u=556618733,1205300389&fm=21&gp=0.jpg");
+        urls.add("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605454988368&di=b0002ea6a6ed0d054a57693bb0849076&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20170318%2Fa5e5eb349b80486e949e8919278ef172_th.jpg");
         urls.add("http://img1.imgtn.bdimg.com/it/u=3272030875,860665188&fm=21&gp=0.jpg");
         urls.add("http://img1.imgtn.bdimg.com/it/u=2237658959,3726297486&fm=21&gp=0.jpg");
         urls.add("http://img1.imgtn.bdimg.com/it/u=3016675040,1510439865&fm=21&gp=0.jpg");
@@ -437,31 +437,30 @@ public class DemoDataProvider {
     @MemoryCache
     public static List<NewInfo> getDemoNewInfos() {
         List<NewInfo> list = new ArrayList<>();
-        list.add(new NewInfo("源码", "Android源码分析--Android系统启动")
-                .setSummary("其实Android系统的启动最主要的内容无非是init、Zygote、SystemServer这三个进程的启动，他们一起构成的铁三角是Android系统的基础。")
-                .setDetailUrl("https://juejin.im/post/5c6fc0cdf265da2dda694f05")
-                .setImageUrl("https://user-gold-cdn.xitu.io/2019/2/22/16914891cd8a950a?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"));
+        list.add(new NewInfo("公众号", "X-Library系列文章视频介绍")
+                .setSummary("获取更多咨询，欢迎点击关注公众号:【我的Android开源之旅】，里面有一整套X-Library系列文章视频介绍！\n")
+                .setDetailUrl("http://mp.weixin.qq.com/mp/homepage?__biz=Mzg2NjA3NDIyMA==&hid=5&sn=bdee5aafe9cc2e0a618d055117c84139&scene=18#wechat_redirect")
+                .setImageUrl("https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/463930705a844f638433d1b26273a7cf~tplv-k3u1fbpfcp-watermark.image"));
 
         list.add(new NewInfo("Android UI", "XUI 一个简洁而优雅的Android原生UI框架，解放你的双手")
                 .setSummary("涵盖绝大部分的UI组件：TextView、Button、EditText、ImageView、Spinner、Picker、Dialog、PopupWindow、ProgressBar、LoadingView、StateLayout、FlowLayout、Switch、Actionbar、TabBar、Banner、GuideView、BadgeView、MarqueeView、WebView、SearchView等一系列的组件和丰富多彩的样式主题。\n")
                 .setDetailUrl("https://juejin.im/post/5c3ed1dae51d4543805ea48d")
                 .setImageUrl("https://user-gold-cdn.xitu.io/2019/1/16/1685563ae5456408?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"));
 
-        list.add(new NewInfo("面试", "写给即将面试的你")
-                .setSummary("最近由于公司业务发展，需要招聘技术方面的人才，由于我在技术方面比较熟悉，技术面的任务就交给我了。今天我要分享的就和面试有关，主要包含技术面的流程、经验和建议，避免大家在今后的面试过程中走一些弯路，帮助即将需要跳槽面试的人。")
-                .setDetailUrl("https://juejin.im/post/5ca4df966fb9a05e4e58320c")
-                .setImageUrl("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554629219186&di=6cdab5cfceaae1f7e6d78dbe79104c9f&imgtype=0&src=http%3A%2F%2Fimg.qinxue365.com%2Fuploads%2Fallimg%2F1902%2F4158-1Z22FZ64E00.jpg"));
-
         list.add(new NewInfo("Android", "XUpdate 一个轻量级、高可用性的Android版本更新框架")
                 .setSummary("XUpdate 一个轻量级、高可用性的Android版本更新框架。本框架借鉴了AppUpdate中的部分思想和UI界面，将版本更新中的各部分环节抽离出来，形成了如下几个部分：")
                 .setDetailUrl("https://juejin.im/post/5b480b79e51d45190905ef44")
                 .setImageUrl("https://user-gold-cdn.xitu.io/2018/7/13/16492d9b7877dc21?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"));
 
-
         list.add(new NewInfo("Android/HTTP", "XHttp2 一个功能强悍的网络请求库，使用RxJava2 + Retrofit2 + OKHttp进行组装")
                 .setSummary("一个功能强悍的网络请求库，使用RxJava2 + Retrofit2 + OKHttp组合进行封装。还不赶紧点击使用说明文档，体验一下吧！")
                 .setDetailUrl("https://juejin.im/post/5b6b9b49e51d4576b828978d")
                 .setImageUrl("https://user-gold-cdn.xitu.io/2018/8/9/1651c568a7e30e02?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"));
+
+        list.add(new NewInfo("源码", "Android源码分析--Android系统启动")
+                .setSummary("其实Android系统的启动最主要的内容无非是init、Zygote、SystemServer这三个进程的启动，他们一起构成的铁三角是Android系统的基础。")
+                .setDetailUrl("https://juejin.im/post/5c6fc0cdf265da2dda694f05")
+                .setImageUrl("https://user-gold-cdn.xitu.io/2019/2/22/16914891cd8a950a?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"));
         return list;
     }
 

@@ -18,7 +18,7 @@
 #保护注解
 -keepattributes *Annotation*
 #忽略警告
--ignorewarning
+-ignorewarnings
 
 ##记录生成的日志数据,gradle build时在本项目根目录输出##
 #apk 包内所有 class 的内部结构
@@ -218,14 +218,18 @@
 
 # xpage
 -keep class com.xuexiang.xpage.annotation.** { *; }
+-keep class com.xuexiang.xpage.config.** { *; }
 
 # xaop
 -keep @com.xuexiang.xaop.annotation.* class * {*;}
+-keep @org.aspectj.lang.annotation.* class * {*;}
 -keep class * {
     @com.xuexiang.xaop.annotation.* <fields>;
+    @org.aspectj.lang.annotation.* <fields>;
 }
 -keepclassmembers class * {
     @com.xuexiang.xaop.annotation.* <methods>;
+    @org.aspectj.lang.annotation.* <methods>;
 }
 
 # xrouter
@@ -320,9 +324,6 @@
 -keepclasseswithmembers class com.camerakit.preview.CameraSurfaceView {
     native <methods>;
 }
-
-# materialedittext
--keep class com.xuexiang.xui.widget.edittext.materialedittext.** { *; }
 
 # vlayout
 -keepattributes InnerClasses

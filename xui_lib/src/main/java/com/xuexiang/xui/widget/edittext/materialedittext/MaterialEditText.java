@@ -2,10 +2,8 @@ package com.xuexiang.xui.widget.edittext.materialedittext;
 
 import android.animation.ArgbEvaluator;
 import android.animation.ObjectAnimator;
-import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.ColorStateList;
-import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -31,6 +29,7 @@ import android.view.View;
 
 import androidx.annotation.DrawableRes;
 import androidx.annotation.IntDef;
+import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatEditText;
@@ -64,6 +63,7 @@ import io.github.inflationx.calligraphy3.HasTypeface;
  * @author XUE
  * @since 2019/3/20 16:47
  */
+@Keep
 public class MaterialEditText extends AppCompatEditText implements HasTypeface {
 
     @Retention(RetentionPolicy.SOURCE)
@@ -368,8 +368,8 @@ public class MaterialEditText extends AppCompatEditText implements HasTypeface {
         int defaultBaseColor = Color.BLACK;
 
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.MaterialEditText, defStyleAttr, 0);
-        textColorStateList = typedArray.getColorStateList(R.styleable.MaterialEditText_met_textColor);
-        textColorHintStateList = typedArray.getColorStateList(R.styleable.MaterialEditText_met_textColorHint);
+        textColorStateList = ResUtils.getColorStateListAttrRes(context, typedArray, R.styleable.MaterialEditText_met_textColor);
+        textColorHintStateList = ResUtils.getColorStateListAttrRes(context, typedArray, R.styleable.MaterialEditText_met_textColorHint);
         baseColor = typedArray.getColor(R.styleable.MaterialEditText_met_baseColor, defaultBaseColor);
 
         primaryColor = typedArray.getColor(R.styleable.MaterialEditText_met_primaryColor, ThemeUtils.resolveColor(getContext(), R.attr.colorPrimary, baseColor));

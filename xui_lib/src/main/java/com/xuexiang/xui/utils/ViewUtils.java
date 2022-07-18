@@ -60,6 +60,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.core.content.ContextCompat;
 
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.xuexiang.xui.R;
 import com.xuexiang.xui.XUI;
 import com.xuexiang.xui.widget.imageview.ImageLoader;
@@ -1099,6 +1100,76 @@ public final class ViewUtils {
      */
     public static void setViewsFont(View... views) {
         setViewsFont(XUI.getDefaultTypeface(), views);
+    }
+
+    /**
+     * 清除控件的长按事件
+     *
+     * @param rootView 根布局
+     * @param ids      需要清除的控件id集合
+     */
+    public static void clearViewLongClick(View rootView, int... ids) {
+        if (rootView == null || ids == null || ids.length == 0) {
+            return;
+        }
+        for (int id : ids) {
+            View view = rootView.findViewById(id);
+            if (view != null) {
+                view.setOnLongClickListener(new View.OnLongClickListener() {
+                    @Override
+                    public boolean onLongClick(View v) {
+                        return true;
+                    }
+                });
+            }
+        }
+    }
+
+    /**
+     * 清除所有控件的长按事件
+     *
+     * @param view 根布局
+     */
+    public static void clearAllViewLongClick(View view) {
+        if (view == null) {
+            return;
+        }
+        if (view instanceof ViewGroup) {
+            ViewGroup viewGroup = (ViewGroup) view;
+            for (int i = 0; i < viewGroup.getChildCount(); i++) {
+                clearAllViewLongClick(viewGroup.getChildAt(i));
+            }
+        } else {
+            view.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    return true;
+                }
+            });
+        }
+    }
+
+    /**
+     * 设置CollapsingToolbarLayout选项卡的字体
+     *
+     * @param collapsingToolbarLayout CollapsingToolbarLayout
+     */
+    public static void setToolbarLayoutTextFont(CollapsingToolbarLayout collapsingToolbarLayout) {
+        setToolbarLayoutTextFont(collapsingToolbarLayout, XUI.getDefaultTypeface());
+    }
+
+    /**
+     * 设置CollapsingToolbarLayout选项卡的字体
+     *
+     * @param collapsingToolbarLayout CollapsingToolbarLayout
+     * @param typeface                字体
+     */
+    public static void setToolbarLayoutTextFont(CollapsingToolbarLayout collapsingToolbarLayout, Typeface typeface) {
+        if (collapsingToolbarLayout == null || typeface == null) {
+            return;
+        }
+        collapsingToolbarLayout.setExpandedTitleTypeface(typeface);
+        collapsingToolbarLayout.setCollapsedTitleTypeface(typeface);
     }
 
     /**

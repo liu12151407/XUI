@@ -22,7 +22,6 @@ import android.app.Application;
 import com.xuexiang.xaop.XAOP;
 import com.xuexiang.xormlite.XUIDataBaseRepository;
 import com.xuexiang.xormlite.logs.DBLog;
-import com.xuexiang.xpage.AppPageConfig;
 import com.xuexiang.xpage.PageConfig;
 import com.xuexiang.xrouter.launcher.XRouter;
 import com.xuexiang.xuidemo.MyApp;
@@ -60,13 +59,11 @@ public final class XBasicLibInit {
     /**
      * 初始化工具类
      *
-     * @param application
+     * @param application 应用上下文
      */
     private static void initUtils(Application application) {
         XUtil.init(application);
         XUtil.debug(MyApp.isDebug());
-        //百度定位
-        LocationService.get().init(application);
         TokenUtils.init(application);
     }
 
@@ -79,13 +76,8 @@ public final class XBasicLibInit {
     private static void initPage(Application application) {
         //自动注册页面
         PageConfig.getInstance()
-                .setPageConfiguration(context -> {
-                    //自动注册页面,是编译时自动生成的，build一下就出来了
-                    return AppPageConfig.getInstance().getPages();
-                })
                 .debug(MyApp.isDebug() ? "PageLog" : null)
                 .setContainActivityClazz(BaseActivity.class)
-                .enableWatcher(MyApp.isDebug())
                 .init(application);
     }
 

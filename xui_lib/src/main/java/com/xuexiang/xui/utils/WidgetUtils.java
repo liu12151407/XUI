@@ -19,7 +19,11 @@ package com.xuexiang.xui.utils;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.ContextWrapper;
+import android.graphics.Color;
 import android.graphics.Typeface;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -27,13 +31,17 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
+import android.widget.FrameLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.tabs.TabLayout;
 import com.xuexiang.xui.R;
 import com.xuexiang.xui.XUI;
@@ -65,7 +73,7 @@ public final class WidgetUtils {
     /**
      * 让Activity全屏显示
      *
-     * @param activity
+     * @param activity activity
      */
     public static void requestFullScreen(@NonNull Activity activity) {
         activity.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -128,6 +136,38 @@ public final class WidgetUtils {
     }
 
     //===============TabLayout=============//
+
+    /**
+     * 为TabLayout增加不带水波纹的选项卡
+     *
+     * @param tabLayout 选项卡
+     * @param text      选项文字内容
+     * @param resId     选项图标
+     */
+    public static TabLayout.Tab addTabWithoutRipple(@NonNull TabLayout tabLayout, @Nullable CharSequence text, @DrawableRes int resId) {
+        TabLayout.Tab tab = tabLayout.newTab();
+        tab.setText(text);
+        tab.setIcon(resId);
+        tab.view.setBackgroundColor(Color.TRANSPARENT);
+        tabLayout.addTab(tab);
+        return tab;
+    }
+
+    /**
+     * 为TabLayout增加不带水波纹的选项卡
+     *
+     * @param tabLayout 选项卡
+     * @param text      选项文字内容
+     * @param icon      选项图标
+     */
+    public static TabLayout.Tab addTabWithoutRipple(@NonNull TabLayout tabLayout, @Nullable CharSequence text, @Nullable Drawable icon) {
+        TabLayout.Tab tab = tabLayout.newTab();
+        tab.setText(text);
+        tab.setIcon(icon);
+        tab.view.setBackgroundColor(Color.TRANSPARENT);
+        tabLayout.addTab(tab);
+        return tab;
+    }
 
     /**
      * 设置TabLayout选项卡的字体
@@ -360,6 +400,93 @@ public final class WidgetUtils {
      */
     public static MiniLoadingDialog getMiniLoadingDialog(@NonNull Context context, @NonNull String message) {
         return new MiniLoadingDialog(context, message);
+    }
+
+
+    /**
+     * 隐藏底部弹窗的背景颜色(用于显示圆角）
+     *
+     * @param dialog 底部弹窗
+     */
+    public static void transparentBottomSheetDialogBackground(BottomSheetDialog dialog) {
+        if (dialog != null && dialog.getWindow() != null) {
+            FrameLayout frameLayout = dialog.getWindow().findViewById(R.id.design_bottom_sheet);
+            if (frameLayout != null) {
+                frameLayout.setBackgroundColor(Color.TRANSPARENT);
+            }
+        }
+    }
+
+    /**
+     * 去除窗口的背景色【解决过度绘制问题】
+     *
+     * @param activity 窗口
+     */
+    public static void clearActivityBackground(Activity activity) {
+        if (activity == null) {
+            return;
+        }
+        clearWindowBackground(activity.getWindow());
+    }
+
+    /**
+     * 去除窗口的背景色【解决过度绘制问题】
+     *
+     * @param window 窗口
+     */
+    public static void clearWindowBackground(Window window) {
+        if (window == null) {
+            return;
+        }
+        window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+    }
+
+
+    /**
+     * 去除控件的背景色【解决过度绘制问题】
+     *
+     * @param view 控件
+     */
+    public static void clearViewBackground(View view) {
+        if (view == null) {
+            return;
+        }
+        view.setBackgroundColor(Color.TRANSPARENT);
+    }
+
+    /**
+     * 去除控件布局下所有控件的背景色【解决过度绘制问题】
+     *
+     * @param view 控件
+     */
+    public static void clearAllViewBackground(View view) {
+        if (view == null) {
+            return;
+        }
+        if (view instanceof ViewGroup) {
+            ViewGroup viewGroup = (ViewGroup) view;
+            for (int i = 0; i < viewGroup.getChildCount(); i++) {
+                clearAllViewBackground(viewGroup.getChildAt(i));
+            }
+        }
+        view.setBackgroundColor(Color.TRANSPARENT);
+    }
+
+    /**
+     * 根据上下文获取Activity
+     *
+     * @param context 上下文
+     * @return Activity
+     */
+    public static Activity findActivity(Context context) {
+        if (context instanceof Activity) {
+            return (Activity) context;
+        }
+        if (context instanceof ContextWrapper) {
+            ContextWrapper wrapper = (ContextWrapper) context;
+            return findActivity(wrapper.getBaseContext());
+        }
+        return null;
     }
 
 }

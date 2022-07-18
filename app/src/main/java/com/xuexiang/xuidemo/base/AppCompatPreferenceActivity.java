@@ -17,6 +17,7 @@
 
 package com.xuexiang.xuidemo.base;
 
+import android.content.Context;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
@@ -35,6 +36,8 @@ import com.xuexiang.xui.widget.slideback.SlideBack;
 import com.xuexiang.xuidemo.R;
 import com.xuexiang.xuidemo.utils.SettingSPUtils;
 
+import io.github.inflationx.viewpump.ViewPumpContextWrapper;
+
 /**
  * A {@link PreferenceActivity} which implements and proxies the necessary calls
  * to be used with AppCompat.
@@ -44,13 +47,19 @@ public abstract class AppCompatPreferenceActivity extends PreferenceActivity {
     private AppCompatDelegate mDelegate;
 
     @Override
+    protected void attachBaseContext(Context newBase) {
+        //注入字体
+        super.attachBaseContext(ViewPumpContextWrapper.wrap(newBase));
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         initTheme();
         getDelegate().installViewFactory();
         getDelegate().onCreate(savedInstanceState);
         super.onCreate(savedInstanceState);
 
-        SlideBack.with(this)
+        SlideBack.withFixSize(this)
                 .haveScroll(true)
                 .callBack(this::finish)
                 .register();
